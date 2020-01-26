@@ -58,10 +58,9 @@ export default {
         .then(res => res.json())
         .then(alunoRetornado => {
               this.alunos.push(alunoRetornado);
-              this.nome = "";
+              this.nome = ""; 
         })
 
-  
     },
     remover(aluno) {
       this.$http.delete(`http://localhost:3000/alunos/${aluno.id}`).then(() => {
